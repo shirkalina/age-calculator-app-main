@@ -1,0 +1,140 @@
+@purple: hsl(259, 100%, 65%);
+@light-red: hsl(0, 100%, 67%);
+
+@white: hsl(0, 0%, 100%);
+@off-white: hsl(0, 0%, 94%);
+@light-grey: hsl(0, 0%, 86%);
+@smokey-grey: hsl(0, 1%, 44%);
+@off-black: hsl(0, 0%, 8%);
+
+@font-size-inputs: 32px;
+@font-family: "Roboto", sans-serif;
+
+.hidden {
+  visibility: hidden;
+}
+
+body {
+  background-color: @light-grey;
+  font-family: @font-family;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background-color: @white;
+  width: 280px;
+  border-radius: 10px 10px 60px 10px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 500px) {
+    width: 170px;
+    padding: 20px;
+  }
+}
+
+.input__container {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-rows: 12px 25px;
+
+  column-gap: 50px;
+
+  font-size: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  padding-bottom: 30px;
+  border-bottom: 1px solid @off-white;
+
+  color: @smokey-grey;
+
+  @media (max-width: 500px) {
+    column-gap: 30px;
+  }
+
+  label {
+    vertical-align: bottom;
+    height: 10px;
+  }
+
+  input {
+    width: 50px;
+    height: 25px;
+
+    font-weight: 700;
+    border: 1px solid @off-white;
+    border-radius: 3px;
+    padding-left: 10px;
+
+    @media (max-width: 500px) {
+      width: 40px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.btn__container {
+  position: relative;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  background-color: @purple;
+
+  position: absolute;
+  left: 240px;
+  top: -20px;
+
+  @media (max-width: 500px) {
+    left: 65px;
+  }
+}
+
+.button:hover {
+  background-color: @off-black;
+}
+
+.button__svg {
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+  top: 25%;
+}
+
+.output__container {
+  margin-top: 15px;
+  div {
+    display: flex;
+    gap: 5px;
+    font-family: "Poppins";
+    margin-bottom: -10px;
+  }
+}
+
+.output {
+  color: @purple;
+  font-size: @font-size-inputs;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.output__text {
+  font-style: italic;
+  font-weight: bold;
+  font-size: @font-size-inputs;
+  margin: 0;
+}
