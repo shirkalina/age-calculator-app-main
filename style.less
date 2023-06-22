@@ -130,6 +130,10 @@ body {
   font-size: @font-size-inputs;
   font-style: italic;
   font-weight: bold;
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 }
 
 .output__text {
@@ -137,4 +141,20 @@ body {
   font-weight: bold;
   font-size: @font-size-inputs;
   margin: 0;
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
+}
+
+.error {
+  color: @light-red;
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+  width: 100px;
+
+  @media (max-width: 500px) {
+    width: 50px;
+  }
 }

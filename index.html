@@ -36,14 +36,17 @@
   </head>
   <body>
     <main class="container">
-      <div class="input__container">
-        <label for="day"> Day </label>
-        <label for="month"> Month </label>
-        <label for="year"> Year </label>
-        <input class="date" type="number" placeholder="DD" id="day" />
-        <input class="month" type="number" placeholder="MM" id="month" />
-        <input class="year" type="number" placeholder="YYYY" id="year" />
-      </div>
+      <form class="input__container">
+        <label class="lable-date" ="day"> Day </label>
+        <label class="lable-month" for="month"> Month </label>
+        <label class="lable-year" for="year"> Year </label>
+        <input class="date" type="text" placeholder="DD" id="day" />
+        <input class="month" type="text" placeholder="MM" id="month" />
+        <input class="year" type="text" placeholder="YYYY" id="year" />
+        <p class="error error-day hidden">error</p>
+        <p class="error error-month hidden">error</p>
+        <p class="error error-year hidden">error</p>
+      </form>
 
       <div class="btn__container">
         <button class="button" type="button">
@@ -88,6 +91,7 @@
       >. Coded by <a href="https://github.com/shirkalina">Tatiana Kartavykh</a>.
     </footer>
 
+    <script src="https://unpkg.com/imask"></script>
     <script src="main.js"></script>
   </body>
 </html>
